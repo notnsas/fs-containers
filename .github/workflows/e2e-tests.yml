@@ -39,6 +39,29 @@ jobs:
       - name: Check running containers
         run: docker ps
 
+      - name: Show running containers
+        run: docker ps -a
+
+      - name: Show compose status
+        working-directory: ./todo-app
+        run: docker compose ps
+
+      - name: Show backend logs
+        working-directory: ./todo-app
+        run: docker compose logs backend
+
+      - name: Show frontend logs
+        working-directory: ./todo-app
+        run: docker compose logs app
+
+      - name: Show mongo logs
+        working-directory: ./todo-app
+        run: docker compose logs mongo
+
+      - name: Show redis logs
+        working-directory: ./todo-app
+        run: docker compose logs redis
+        
       - name: Check nginx health
         run: |
           echo "Checking nginx health endpoint..."
@@ -48,6 +71,7 @@ jobs:
             echo "Nginx health check failed!"
             exit 1
           fi
+      
 
       - name: Install dependencies
         working-directory: ./todo-tests
