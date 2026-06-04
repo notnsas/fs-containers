@@ -1,0 +1,37 @@
+### Get all todos
+GET http://localhost:3000/todos
+Content-Type: application/json
+
+### Get all statistics
+GET http://localhost:3000/statistics
+Content-Type: application/json
+
+
+### Create a todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "text": "Learn Docker + MongoDB"
+}
+
+
+### Get single todo (replace ID)
+GET http://localhost:3000/todos/<TODO_ID>
+Content-Type: application/json
+
+
+### Update todo (replace ID)
+PUT http://localhost:3000/todos/6a1f2e319a00623a2e9df8a3
+Content-Type: application/json
+
+{
+  "text": "Updated todo text",
+  "done": true
+}
+
+
+
+### Delete todo (replace ID)
+DELETE http://localhost:3000/todos/<TODO_ID>
+Content-Type: application/json

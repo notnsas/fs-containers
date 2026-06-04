@@ -1,0 +1,44 @@
+root@6ff2cff7c536:/# nano /usr/src/app/index.js
+GNU nano 8.7.1                /usr/src/app/index.js *                        
+
+console.log('Hello World')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Save modified buffer?                                                          
+
+ Y Yes
+
+ N No           ^C Cancel
+
+root@6ff2cff7c536:/# 

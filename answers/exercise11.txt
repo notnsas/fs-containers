@@ -1,0 +1,57 @@
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers$ cd todo-app
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app$ cd todo-backend
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker compose -f docker-compose.dev.yml up -d
+
+The command 'docker' could not be found in this WSL 2 distro.
+We recommend to activate the WSL integration in Docker Desktop settings.
+
+For details about using Docker Desktop with WSL 2, visit:
+
+https://docs.docker.com/go/wsl2/
+
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker compose -f docker-compose.dev.yml up -d
+
+The command 'docker' could not be found in this WSL 2 distro.
+We recommend to activate the WSL integration in Docker Desktop settings.
+
+For details about using Docker Desktop with WSL 2, visit:
+
+https://docs.docker.com/go/wsl2/
+
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker compose -f docker-compose.dev.yml up -d
+[+] Running 7/7
+ ✔ redis Pulled                                    22.9s 
+   ✔ ade30136b2f2 Pull complete                    13.2s 
+   ✔ ad395060b0aa Pull complete                    11.3s 
+   ✔ 8fabda3f1df5 Pull complete                     5.2s 
+   ✔ 12eb956baa11 Pull complete                     6.1s 
+   ✔ 4f4fb700ef54 Pull complete                    12.2s 
+   ✔ b607e46fa9d6 Pull complete                    10.4s 
+[+] Running 2/2
+ ✔ Container todo-backend-redis-1  Started         11.7s 
+ ✔ Container todo-backend-mongo-1  Started          7.8s 
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/par(base) nara@nara:/mnt/
+t12/fs-containers/todo-app/todo-backend$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+2486076fc037   redis     "docker-entrypoint.s…"   27 minutes ago   Up 27 minutes   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp     todo-backend-redis-1
+7bc2441b2066   mongo     "docker-entrypoint.s…"   39 hours ago     Up 27 minutes   0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -it todo-backend-redis-1 redis-cli
+127.0.0.1:6379> KEYS added_todos
+1) "added_todos"
+127.0.0.1:6379> KEYS added_todos
+1) "added_todos"
+127.0.0.1:6379> GET added_todos
+"6"
+127.0.0.1:6379> SET added_todos 9001
+OK
+127.0.0.1:6379> GET added_todos
+"9001"
+127.0.0.1:6379> DEL added_todos
+(integer) 1
+127.0.0.1:6379> GET added_todos
+(nil)
+127.0.0.1:6379> KEYS added_todos
+(empty array)
+127.0.0.1:6379> GET added_todos
+"2"
+127.0.0.1:6379> 

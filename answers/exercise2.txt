@@ -1,0 +1,71 @@
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen$ docker run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+6f5c5aa4e145: Pull complete 
+1c24335ddd46: Pull complete 
+Digest: sha256:f3d28607ddd78734bb7f71f117f3c6706c666b8b76cbff7c9ff6e5718d46ff64
+Status: Downloaded newer image for ubuntu:latest
+root@6ff2cff7c536:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+root@6ff2cff7c536:/# mkdir /usr/src/app
+root@6ff2cff7c536:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+root@6ff2cff7c536:/# touch /usr/src/app/index.js
+root@6ff2cff7c536:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+root@6ff2cff7c536:/# cd usr/src/app
+root@6ff2cff7c536:/usr/src/app# ls 
+index.js
+root@6ff2cff7c536:/usr/src/app# 
+root@6ff2cff7c536:/usr/src/app# 
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen$ docker run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+6f5c5aa4e145: Pull complete 
+1c24335ddd46: Pull complete 
+Digest: sha256:f3d28607ddd78734bb7f71f117f3c6706c666b8b76cbff7c9ff6e5718d46ff64 
+Status: Downloaded newer image for ubuntu:latest
+root@6ff2cff7c536:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+root@6ff2cff7c536:/# mkdir /usr/src/app
+root@6ff2cff7c536:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+root@6ff2cff7c536:/# touch /usr/src/app/index.js
+root@6ff2cff7c536:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+root@6ff2cff7c536:/# cd usr/src/app
+root@6ff2cff7c536:/usr/src/app# ls 
+index.js
+root@6ff2cff7c536:/usr/src/app# exit
+bash: syntax error near unexpected token `nara@nara:/mnt/d/Code/Javascript/fullstackopen$'
+bash: Unable: command not found
+bash: latest:: command not found
+bash: 6f5c5aa4e145:: command not found
+bash: 1c24335ddd46:: command not found
+bash: Digest:: command not found
+bash: Status:: command not found
+bash: root@6ff2cff7c536:/#: No such file or directory
+bash: bin: command not found
+bash: boot: command not found
+bash: root@6ff2cff7c536:/#: No such file or directory
+bash: root@6ff2cff7c536:/#: No such file or directory
+bash: bin: command not found
+bash: boot: command not found
+bash: root@6ff2cff7c536:/#: No such file or directory
+bash: root@6ff2cff7c536:/#: No such file or directory
+bash: bin: command not found
+bash: boot: command not found
+bash: root@6ff2cff7c536:/#: No such file or directory
+bash: root@6ff2cff7c536:/usr/src/app#: No such file or directory
+bash: index.js: command not found
+bash: root@6ff2cff7c536:/usr/src/app#: No such file or directory
+root@6ff2cff7c536:/usr/src/app# cd ../../..
+root@6ff2cff7c536:/# exit
+exit
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen$ 

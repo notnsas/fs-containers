@@ -1,0 +1,202 @@
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers$ docker compose -f docker-compose.dev.yml up -d
+open /mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/docker-compose.dev.yml: no such file or directory
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers$ cd playground
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/playground$ docker compose -f docker-compose.dev.yml up -d
+open /mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/playground/docker-compose.dev.yml: no such file or directory
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/play
+ground$ cd ../..
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12$ cd D:\Code\Javascript\fullstackopen\part12\fs-containers\todo-app\todo-backend
+-bash: cd: D:CodeJavascriptfullstackopenpart12fs-containerstodo-apptodo-backend: No such file or directory
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12$ cd todo-app\todo-backend
+-bash: cd: todo-apptodo-backend: No such file or directory
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12$ cd fs-containers
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers$ cd todo-app\todo-backend
+-bash: cd: todo-apptodo-backend: No such file or directory
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers$ cd todo-app
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app$ td todo-backend
+^C^C
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app$ cd todo-backend
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker compose -f docker-compose.dev.yml up -d
+[+] Running 1/1
+ ✔ Container todo-backend-mongo-1  Started          3.9s 
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS              PORTS                                           NAMES
+7bc2441b2066   mongo     "docker-entrypoint.s…"   24 hours ago   Up About a minute   0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 bash
+root@7bc2441b2066:/# ls
+^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongosh
+Current Mongosh Log ID: 6a208036da747aa7329df8a2
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.3
+Using MongoDB:          undefined
+Using Mongosh:          2.8.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+test> show dbs
+^C^[[200~help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+test> show dbs
+^[[201~(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+test> show dbs
+^C
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 bash
+root@7bc2441b2066:/# mongo
+^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 bash
+root@7bc2441b2066:/# mongosh
+^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongosh
+Current Mongosh Log ID: 6a2080ccfab52a46b19df8a2
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.3
+Using MongoDB:          undefined
+Using Mongosh:          2.8.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+test> show dbs
+^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongosh
+Current Mongosh Log ID: 6a20812201551496c49df8a2
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.3
+Using MongoDB:          undefined
+Using Mongosh:          2.8.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+test> ^[[200~rs.slaveOk()^[[201~
+^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongosh
+Current Mongosh Log ID: 6a208129880eb5224d9df8a2
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.3
+Using MongoDB:          undefined
+Using Mongosh:          2.8.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+test> rs.slaveOk()                             
+^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongosh
+Current Mongosh Log ID: 6a208161f87d61fa3c9df8a2
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.3
+Using MongoDB:          undefined
+Using Mongosh:          2.8.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+test> show dbs              
+^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongosh
+Current Mongosh Log ID: 6a208188712e523ce59df8a2
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.3
+Using MongoDB:          undefined
+Using Mongosh:          2.8.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+test> db.runCommand({ ping: 1})
+^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongosh
+Current Mongosh Log ID: 6a2081fef27adf6b3e9df8a2
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.3
+Using MongoDB:          undefined
+Using Mongosh:          2.8.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+test> ^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongo
+OCI runtime exec failed: exec failed: unable to start container process: exec: "mongo": executable file not found in $PATH: unknown
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongosh
+Current Mongosh Log ID: 6a208219f63bf882979df8a2
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.3
+Using MongoDB:          undefined
+Using Mongosh:          2.8.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+test> ^C(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-b// Source - https://stackoverflow.com/a/77071969969
+// Posted by Ahmed Bahey Eddin, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-06-04, License - CC BY-SA 4.0
+
+docker exec -it mongo-instance-1 mongosh -u root ^C examp
+le
+
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -t todo-backend-mongo-1 mongosh^C
+(base) nara@nara:/mnt/d/Code/Javascript/fullstackopen/part12/fs-containers/todo-app/todo-backend$ docker exec -it todo-backend-mongo-1 mongosh -u root -p example
+Current Mongosh Log ID: 6a2082444d9ca394e59df8a2
+Connecting to:          mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.3
+Using MongoDB:          8.2.9
+Using Mongosh:          2.8.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2026-06-03T19:25:14.416+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2026-06-03T19:25:17.949+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2026-06-03T19:25:17.949+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2026-06-03T19:25:17.949+00:00: We suggest setting the contents of sysfsFile to 0.
+   2026-06-03T19:25:17.949+00:00: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+------
+
+test> show dbs
+admin         100.00 KiB
+config         96.00 KiB
+local          64.00 KiB
+the_database   72.00 KiB
+test> use the_database
+switched to db the_database
+the_database> show collections
+todos
+the_database> db.todos.find({})
+[
+  {
+    _id: ObjectId('6a1f2e319a00623a2e9df8a3'),
+    text: 'Updated todo text',
+    done: true
+  },
+  {
+    _id: ObjectId('6a1f2e319a00623a2e9df8a4'),
+    text: 'Learn about containers',
+    done: false
+  },
+  {
+    _id: ObjectId('6a1f3099934e1d887c2d1668'),
+    text: 'Learn Docker + MongoDB',
+    done: false,
+    __v: 0
+  }
+]
+the_database> db.todos
+the_database.todos
+the_database> db.todos.insertOne({ text : "", Increase th
+the_database> db.todos.insertOne({ text : "Increase the n
+the_database> db.todos.insertOne({ text : "Increase the number of tools in my tool belt", done: false })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a2082c54d9ca394e59df8a3')
+}
+the_database> db.todos.find({})
+[
+  {
+    _id: ObjectId('6a1f2e319a00623a2e9df8a3'),
+    text: 'Updated todo text',
+    done: true
+  },
+  {
+    _id: ObjectId('6a1f2e319a00623a2e9df8a4'),
+    text: 'Learn about containers',
+    done: false
+  },
+  {
+    _id: ObjectId('6a1f3099934e1d887c2d1668'),
+    text: 'Learn Docker + MongoDB',
+    done: false,
+    __v: 0
+  },
+  {
+    _id: ObjectId('6a2082c54d9ca394e59df8a3'),
+    text: 'Increase the number of tools in my tool belt',
+    done: false
+  }
+]
+the_database> 
