@@ -11,3 +11,6 @@ RUN npm ci
 USER node
 
 CMD ["npm", "start"]
+
+HEALTHCHECK --interval=5m --timeout=3s \
+  CMD curl -f http://app:8080/api/todos || exit 1
