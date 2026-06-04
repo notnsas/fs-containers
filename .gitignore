@@ -1,5 +1,5 @@
 node_modules/
-.env
+# .env
 
 todo-app/redis_data/
 todo-app/mongo_data/
