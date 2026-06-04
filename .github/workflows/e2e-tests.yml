@@ -39,6 +39,16 @@ jobs:
       - name: Check running containers
         run: docker ps
 
+      - name: Check nginx health
+        run: |
+          echo "Checking nginx health endpoint..."
+          if curl -f http://localhost:8080/api/todos > /dev/null 2>&1; then
+            echo "Nginx is healthy!"
+          else
+            echo "Nginx health check failed!"
+            exit 1
+          fi
+
       - name: Install dependencies
         working-directory: ./todo-tests
         run: npm ci
