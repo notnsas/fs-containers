@@ -2,4 +2,7 @@
 .gitignore
 node_modules
 /data/db
+mongo_data
+redis_data
+node_modules
 # Dockerfile

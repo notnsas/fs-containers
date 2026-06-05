@@ -6,6 +6,12 @@ COPY . .
 
 # COPY /package.json /package-lock.json ./
 
+RUN npm cache clean --force
+
+RUN ls -la >&2
+
+RUN pwd >&2
+
 RUN npm ci
 
 RUN npm run build

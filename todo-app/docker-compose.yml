@@ -4,6 +4,8 @@ services:
     build:
       context: ./todo-frontend # The context will pick this directory as the "build context"
       dockerfile: Dockerfile # This will simply tell which dockerfile to read
+    environment:
+      - VITE_BACKEND_URL=nginx://nginx:80/api
     # volumes:
     #   - ./todo-frontend:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
     # ports:
@@ -35,7 +37,7 @@ services:
       MONGO_INITDB_DATABASE: the_database
     volumes:
       - ./todo-backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
-      - ./todo-backend/mongo_data:/data/db
+      - /todo-backend/mongo_data:/data/db
 
   redis:
     image: redis

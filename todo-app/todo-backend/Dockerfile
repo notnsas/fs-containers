@@ -4,6 +4,8 @@ WORKDIR /usr/src/app
 
 COPY --chown=node:node . .
 
+RUN npm cache clean --force
+
 RUN npm ci 
 
 # ENV DEBUG=playground:*
